@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./tela-login-component.component.css']
 })
 export class TelaLoginComponentComponent {
-
+  login() {
+    alert("Funcionou")
+  }
 }
