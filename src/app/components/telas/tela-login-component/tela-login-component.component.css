@@ -38,6 +38,13 @@ button {
     background: #4C9AFF;
 }
 
+.error-message {
+    margin-top: -18px;
+    margin-left: -200px;
+    padding: 10px;
+    color: red;
+}
+
 a {
     text-decoration: none;
     color: #0052CC;
