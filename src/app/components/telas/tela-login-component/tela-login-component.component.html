@@ -4,9 +4,9 @@
     <h3>Fazer Login no Kanboom</h3>
 
     <div class="form-login">
-        <input class="input-login" type="email" placeholder="E-mail">
-        <input class="input-senha" type="password" placeholder="Senha">
-        <button (click)="login()">entrar</button>
+        <input class="input-login" type="email" [(ngModel)]="usuario.username">
+        <input class="input-senha" type="password" placeholder="Senha" [(ngModel)]="usuario.password">
+        <button (click)=" login()">entrar</button>
     </div>
 
     <a href="#">Esqueci minha senha</a>
