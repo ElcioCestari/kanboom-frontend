@@ -1,0 +1,16 @@
+<div class="container">
+
+  <img src="assets/logo.png" alt="Logo da Kanboom">
+  
+      <h3>Crie sua conta!</h3>
+
+  <form class="form-cadastro" action="">
+    <input class="input-nome" type="name" placeholder="Nome">
+    <input class="input-email" type="email" placeholder="E-mail" [formControl]="email">
+    <input class="input-senha" type="password" placeholder="Senha">
+    <input class="input-confirma-senha" type="password" placeholder="Confirme sua senha">
+    <button class="btn-entrar" (click)="save()">Criar nova conta</button>
+    <span>Já tem uma conta?<a href="black">Clique aqui</a></span>
+  </form>
+
+</div>
