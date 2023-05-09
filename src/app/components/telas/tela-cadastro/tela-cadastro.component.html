@@ -5,10 +5,10 @@
       <h3>Crie sua conta!</h3>
 
   <form class="form-cadastro" action="">
-    <input class="input-nome" type="name" placeholder="Nome">
+    <input class="input-nome" type="name" placeholder="Nome" [formControl]="nome">
     <input class="input-email" type="email" placeholder="E-mail" [formControl]="email">
-    <input class="input-senha" type="password" placeholder="Senha">
-    <input class="input-confirma-senha" type="password" placeholder="Confirme sua senha">
+    <input class="input-senha" type="password" placeholder="Senha" [formControl]="senha">
+    <input class="input-confirma-senha" type="password" placeholder="Confirme sua senha" [formControl]="confirma">
     <button class="btn-entrar" (click)="save()">Criar nova conta</button>
     <span>Já tem uma conta?<a href="black">Clique aqui</a></span>
   </form>

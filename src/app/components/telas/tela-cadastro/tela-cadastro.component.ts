@@ -9,6 +9,9 @@ import { FormControl } from '@angular/forms';
 })
 export class TelaCadastroComponent {
 email = new FormControl('')
+senha = new FormControl('')
+nome = new FormControl('')
+confirma = new FormControl('')
 save(){
   alert(this.email.value)
 }
