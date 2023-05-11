@@ -20,6 +20,5 @@ export class TelaLoginComponentComponent implements OnInit {
 
   login() {
     this.service.login(this.usuario);
-
   }
 }

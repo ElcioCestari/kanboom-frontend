@@ -10,12 +10,12 @@ export class UserService {
   }
 
   login(usuario: Usuario) {
-    let url = "http://localhost:3000/users";
-    this.http.get(url, {
-    }).toPromise().then((data: any) => {
+    let url = "http://localhost:3000/users/login";
+    this.http.post(url, usuario
+    ).toPromise().then((data: any) => {
 
-      if (usuario.username === data[0].username && usuario.password === data[0].password) {
-        sessionStorage.setItem("usuario", usuario.username)
+      if (usuario.email === data[0].username && usuario.password === data[0].password) {
+        sessionStorage.setItem("usuario", usuario.email)
       } else {
         alert("usuário não cadastrado")
       }
