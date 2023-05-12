@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Usuario } from '../components/telas/tela-login-component/usuario';
+import { Usuario } from '../../model/usuario';
+import { UsuarioCreate } from 'src/model/usuario_create';
+
+
 
 @Injectable({
   providedIn: 'root',
@@ -26,8 +29,38 @@ export class UserService {
     //salvar o usuário no sessionStorage
   }
 
-  save() {
-    //valida se os campos foram preenchidos
-    //salva um usuário
+  async save(usuario: UsuarioCreate) {
+    // valida se os campos foram preenchidos
+    if (!usuario.email || !usuario.nome || !usuario.senha || !usuario.confirma) {
+      alert("Preencha todos os campos.");
+      return;
+    }
+
+    // Verificar se as senhas são iguais
+    if (usuario.senha !== usuario.confirma) {
+      alert("As senhas precisam ser iguais.");
+      return;
+    }
+
+    // Verificar se as senhas são iguais
+    if (usuario.senha !== usuario.confirma) {
+      alert("As senhas precisam ser iguais.");
+      return;
+    }
+
+    this.salvaUsuario(usuario).subscribe(() => {
+      alert("Usuário cadastrado com sucesso!");
+    });
+
+    
+    
+  }
+
+  
+
+  private salvaUsuario(usuario: UsuarioCreate) {
+    let url = "http://localhost:3000/users";
+    return this.http.post(url, usuario);
   }
 }
+
