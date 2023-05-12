@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 370px;
+  height: 586.2px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid #cacfda;
+  border-radius: 16px;
+}
+
+.form-cadastro {
+  width: 322px;
+  height:354px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 16.8px;
+}
+
+img {
+  position: relative;
+  top: 10px;
+  padding-bottom: 8px;
+}
+
+h3 {
+  font-family: "Helvetica", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  color: #5e6c84;
+}
+
+.input-nome {
+  width: 322px;
+  height: 70px;
+  border: 2px solid #4c9aff;
+  border-radius: 8px;
+  padding: 8px;
+}
+.input-email {
+  width: 322px;
+  height: 70px;
+  border: 2px solid #4c9aff;
+  border-radius: 8px;
+  padding: 8px;
+}
+.input-senha {
+  width: 322px;
+  height: 70px;
+  border: 2px solid #4c9aff;
+  border-radius: 8px;
+  padding: 8px;
+}
+.input-confirma-senha {
+  width: 322px;
+  height: 70px;
+  border: 2px solid #4c9aff;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.btn-entrar {
+  width: 322px;
+  height: 65px;
+  background: #4c9aff;
+  border-radius: 8px;
+  border: 2px solid #4c9aff;
+  color: #ffffff;
+}
+
+span {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 29px;
+  color: #0052CC;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 29px;
+  color: #0052CC;
+  margin-left: 5px;
+}
