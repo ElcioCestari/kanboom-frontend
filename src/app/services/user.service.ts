@@ -8,23 +8,15 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class UserService {
-  constructor(private http: HttpClient, private router: Router) {}
-
+  constructor(private http: HttpClient, private router: Router) { }
   login(usuario: Usuario) {
     let url = 'http://localhost:3000/users/login';
     this.http
       .post(url, usuario)
       .toPromise()
       .then((data: any) => {
-        if (
-          usuario.username === data[0].username &&
-          usuario.password === data[0].password
-        ) {
-          sessionStorage.setItem('usuario', usuario.username);
-          this.router.navigate(['/page-onboarding']);
-        } else {
-          alert('usuário não cadastrado');
-        }
+        sessionStorage.setItem('usuario', usuario.email);
+        this.router.navigate(['/page-onboarding']);
       })
       .catch((error) => {
         alert(error?.error?.message);
