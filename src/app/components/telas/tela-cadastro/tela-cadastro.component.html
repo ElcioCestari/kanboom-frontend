@@ -10,7 +10,7 @@
     <input class="input-senha" type="password" placeholder="Senha" [(ngModel)]="usuario.senha" name="senha" required>
     <input class="input-confirma-senha" type="password" placeholder="Confirme sua senha" [(ngModel)]="usuario.confirma" name="confirma" required>
     <button class="btn-entrar" (click)="save()">Criar nova conta</button>
-    <span>Já tem uma conta?<a href="black">Clique aqui</a></span>
+    <span>Já tem uma conta?<a routerLink="/">Clique aqui</a></span>
   </form>
 
   
