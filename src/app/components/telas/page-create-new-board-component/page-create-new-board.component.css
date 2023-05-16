@@ -1,50 +1,29 @@
 .container-board {
-    width: 850px;
-    height: 90vh;
-    background-color: #EEF3FE;
-}
-
-.card-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid #CACFDA;
+    width: 484px;
+    height: 281px;
     padding: 15px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.card-title:hover {
-    border: 2px solid lightslategray;
+.container-board input,
+button {
+    padding: 5px;
+    height: 44px;
+    border-radius: 10px;
 }
 
-.sign-out {
+.container-board input {
     border: 1px solid #CACFDA;
 }
 
-
-.boards {
-    padding: 10px;
-}
-
-.boards .boards-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.boards .boards-title button {
-    width: 162px;
-    height: 35px;
-    color: #FFFFFF;
-    background: #4C9AFF;
-    border-radius: 8px;
+.container-board button {
+    margin-top: 15px;
     border: none;
-}
-
-.board {
-    width: 239.2px;
-    height: 104px;
-    padding: 5px;
+    font-size: 18px;
+    font-weight: 700;
     color: #FFFFFF;
-    border-radius: 16px;
-    background-color: #3DDC97;
+    background-color: #4C9AFF;
 }
