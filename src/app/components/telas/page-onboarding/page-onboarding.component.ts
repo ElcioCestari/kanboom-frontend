@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./page-onboarding.component.css']
 })
 export class PageOnboardingComponent {
+  translateValue = 0;
 
+  nextSlide() {
+    this.translateValue -= 100;
+  }
 }
