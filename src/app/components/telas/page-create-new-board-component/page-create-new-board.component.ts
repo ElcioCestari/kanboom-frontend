@@ -15,6 +15,8 @@ export class PageCreateNewBoardComponent {
     this.service = service;
   }
 
+  inputValue: string = '';
+
   save() {
     this.service.save(this.board)
   }

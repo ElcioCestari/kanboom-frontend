@@ -2,7 +2,7 @@
     width: 484px;
     height: 281px;
     padding: 15px;
-    background-color: #FFFFFF;
+    background-color: #CACFDA;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,9 +21,12 @@ button {
 
 .container-board button {
     margin-top: 15px;
-    border: none;
     font-size: 18px;
-    font-weight: 700;
     color: #FFFFFF;
+    border: none;
+}
+
+.enable {
+    cursor: pointer;
     background-color: #4C9AFF;
 }
