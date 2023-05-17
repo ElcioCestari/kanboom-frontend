@@ -16,6 +16,7 @@ export class UserService {
       .toPromise()
       .then((data: any) => {
         sessionStorage.setItem('usuario', usuario.email);
+        sessionStorage.setItem('id', data.id);
         this.router.navigate(['/page-onboarding']);
       })
       .catch((error) => {
