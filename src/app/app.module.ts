@@ -10,7 +10,7 @@ import { TelaLoginComponentComponent } from './components/telas/tela-login-compo
 
 import { PageCreateNewBoardComponent } from './components/telas/page-create-new-board-component/page-create-new-board.component';
 import { PageOnboardingComponent } from './components/telas/page-onboarding/page-onboarding.component';
-import { PageForgotPasswordComponent } from './components/telas/page-forgot-password-component/page-forgot-password.component';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -22,6 +22,7 @@ import { PageForgotPasswordComponent } from './components/telas/page-forgot-pass
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    
   ],
   declarations: [
     AppComponent,
@@ -31,9 +32,9 @@ import { PageForgotPasswordComponent } from './components/telas/page-forgot-pass
     TelaLoginComponentComponent,
     PageCreateNewBoardComponent,
     PageOnboardingComponent,
-    PageForgotPasswordComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+
+export class AppModule { }
