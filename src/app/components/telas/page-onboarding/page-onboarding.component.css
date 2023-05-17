@@ -1,29 +1,40 @@
-.container-onboarding {
-    width: 600px;
-    height: 550px;
+.slide-container {
     display: flex;
-    padding: 10px;
-    flex-direction: column;
-    align-items: center;
-    background-color: #CACFDA;
-    margin-bottom: 40px;
+    margin: auto auto;
+    width: 700px;
+    height: 90vh;
+    overflow: hidden;
+    background-color: #fff;
 }
 
-.container-onboarding img {
-    margin-top: 20px;
-    width: 552px;
-    height: 260px;
+.slides {
+    display: flex;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+    padding: 20px;
+    flex: 1 0 94%;
+    text-align: center;
+}
+
+.slide img {
+    width: 500px;
     border: 1px solid #000;
     border-radius: 10px;
 }
 
 .summary {
+    width: 80%;
+    height: 35%;
+    margin: auto auto;
     text-align: center;
-    width: 450px;
 }
 
 a {
-    color:#4C9AFF;
+    cursor: pointer;
+    color: #4C9AFF;
     cursor: pointer;
     text-decoration: none;
 }
