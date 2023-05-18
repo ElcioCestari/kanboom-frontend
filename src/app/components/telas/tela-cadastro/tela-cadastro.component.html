@@ -5,9 +5,9 @@
       <h3>Crie sua conta!</h3>
 
   <form class="form-cadastro" action="">
-    <input class="input-nome"  type="name" placeholder="Nome" [(ngModel)]="usuario.nome" name="name" required>
+    <input class="input-nome"  type="name" placeholder="Nome" [(ngModel)]="usuario.name" name="name" required>
     <input class="input-email" type="email" placeholder="E-mail" [(ngModel)]="usuario.email" name="email" required>
-    <input class="input-senha" type="password" placeholder="Senha" [(ngModel)]="usuario.senha" name="senha" required>
+    <input class="input-senha" type="password" placeholder="Senha" [(ngModel)]="usuario.password" name="senha" required>
     <input class="input-confirma-senha" type="password" placeholder="Confirme sua senha" [(ngModel)]="usuario.confirma" name="confirma" required>
     <button class="btn-entrar" (click)="save()">Criar nova conta</button>
     <span>Já tem uma conta?<a routerLink="/">Clique aqui</a></span>

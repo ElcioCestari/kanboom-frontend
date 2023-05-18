@@ -1,6 +1,6 @@
 export class UsuarioCreate {
   email !: string| null
-  senha !: string| null
-  nome !: string| null
+  password !: string| null
+  name !: string| null
   confirma !: string| null
 }

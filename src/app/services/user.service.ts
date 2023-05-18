@@ -31,8 +31,8 @@ export class UserService {
     // valida se os campos foram preenchidos
     if (
       !usuario.email ||
-      !usuario.nome ||
-      !usuario.senha ||
+      !usuario.name ||
+      !usuario.password ||
       !usuario.confirma
     ) {
       alert('Preencha todos os campos.');
@@ -40,13 +40,13 @@ export class UserService {
     }
 
     // Verificar se as senhas são iguais
-    if (usuario.senha !== usuario.confirma) {
+    if (usuario.password !== usuario.confirma) {
       alert('As senhas precisam ser iguais.');
       return;
     }
 
     // Verificar se as senhas são iguais
-    if (usuario.senha !== usuario.confirma) {
+    if (usuario.password !== usuario.confirma) {
       alert('As senhas precisam ser iguais.');
       return;
     }
