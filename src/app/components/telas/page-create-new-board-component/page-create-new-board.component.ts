@@ -8,14 +8,9 @@ import { Board } from 'src/model/board/board';
   styleUrls: ['./page-create-new-board.component.css']
 })
 export class PageCreateNewBoardComponent {
-  board: Board = new Board;
-  private service: BoardService;
+  board: Board = new Board();
 
-  constructor(service: BoardService) {
-    this.service = service;
-  }
-
-  inputValue: string = '';
+  constructor(private service: BoardService) { }
 
   save() {
     this.service.save(this.board)
