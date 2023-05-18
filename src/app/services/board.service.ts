@@ -11,8 +11,15 @@ export class BoardService {
   constructor(private http: HttpClient, private router: Router) { }
 
   save(board: Board) {
-    let url = 'http://localhost:3000/board';
+    const url = 'http://localhost:3000/board';
     board.userId = sessionStorage.getItem("id")!
-    return this.http.post(url, board);
+    return this.http.post(url, board)
+    .toPromise()
+      .then((data: any) => {
+      alert("Quadro criado") 
+      })
+      .catch((error) => {
+        alert(error?.error?.message);
+      });
   }
 }

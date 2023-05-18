@@ -1,5 +1,5 @@
 <div class="container-board">
     <h1>Criar novo quadro</h1>
-    <input type="text" name="new-board" placeholder="nome do quadro">
-    <button (click)="save()">criar quadro</button>
+    <input type="text" name="new-board" placeholder="nome do quadro" [(ngModel)]="board.name">
+    <button (click)="save()" [ngClass]="{'enable': board.name}">criar quadro</button>
 </div>
