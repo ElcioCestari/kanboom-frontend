@@ -2,8 +2,8 @@
     <div class="card-title">
         <img src="../../../../assets/logo.png" alt="Logo da Kanboom">
         <div class="sign-out">
-            <p>Imagen do perfil e o nome do usuário</p>
-            <a href="#">sair</a>
+            <p>{{email}}</p>
+            <a routerLink="/" (click)="toGoOut()">sair</a>
         </div>
     </div>
 
@@ -12,8 +12,10 @@
             <h1>Meus Quadros</h1>
             <button routerLink="/page-create-new-board">+ criar quadro</button>
         </div>
-        <div class="board">
-            <p>Quadro 1</p>
+        <div class="board-container">
+            <div routerLink="/page-view-board" class="board" *ngFor="let board of boards">
+                {{board.name}}
+            </div>
         </div>
     </div>
-</div>
+</div> 

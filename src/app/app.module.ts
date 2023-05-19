@@ -13,6 +13,7 @@ import { PageOnboardingComponent } from './components/telas/page-onboarding/page
 
 import { PageForgotPasswordComponent } from './components/telas/page-forgot-password-component/page-forgot-password.component';
 import { PageHomeComponent } from './components/telas/page-home/page-home.component';
+import { Usuario } from 'src/model/usuario';
 @NgModule({
   imports: [
     BrowserModule,
@@ -37,8 +38,9 @@ import { PageHomeComponent } from './components/telas/page-home/page-home.compon
     PageForgotPasswordComponent,
     PageHomeComponent,
   ],
-  providers: [],
+  providers: [Usuario],
   bootstrap: [AppComponent],
+  
 })
 
 export class AppModule { }

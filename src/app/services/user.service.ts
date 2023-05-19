@@ -27,6 +27,10 @@ export class UserService {
     //salvar o usuário no sessionStorage
   }
 
+  getEmail(usuario: Usuario) {
+    return sessionStorage.getItem("usuario");
+  }
+
   async save(usuario: UsuarioCreate) {
     // valida se os campos foram preenchidos
     if (

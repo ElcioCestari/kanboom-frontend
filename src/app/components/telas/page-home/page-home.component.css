@@ -1,15 +1,18 @@
 .container-board {
     width: 850px;
-    height: 90vh;
+    height: 100vh;
     background-color: #EEF3FE;
+}
+.container-board img {
+    margin-left: -60px;
 }
 
 .card-title {
     display: flex;
     align-items: center;
+    width: 100%;
     justify-content: space-between;
     border: 1px solid #CACFDA;
-    padding: 15px;
 }
 
 .card-title:hover {
@@ -17,6 +20,11 @@
 }
 
 .sign-out {
+    width: 95px;
+    height: 48px;
+    padding: 10px;
+    margin-right: 20px;
+    font-size: 14px;
     border: 1px solid #CACFDA;
 }
 
@@ -34,16 +42,25 @@
 .boards .boards-title button {
     width: 162px;
     height: 35px;
+    cursor: pointer;
     color: #FFFFFF;
     background: #4C9AFF;
     border-radius: 8px;
     border: none;
 }
 
+.board-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
 .board {
     width: 239.2px;
     height: 104px;
-    padding: 5px;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
     color: #FFFFFF;
     border-radius: 16px;
     background-color: #3DDC97;
