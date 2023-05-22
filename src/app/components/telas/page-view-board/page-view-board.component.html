@@ -1,0 +1,40 @@
+<div class="container-view-board">
+    <div class="card-title">
+        <img src="../../../../assets/logo.png" alt="Logo da Kanboom">
+        <div class="sign-out">
+            <p>{{email}}</p>
+            <a routerLink="/" (click)="toGoOut()">sair</a>
+        </div>
+    </div>
+    <h1>titulo do usuario</h1>
+    <div #column class="column-container">
+        <div class="columns">
+            <div class="column">
+                <div class="title toDo">TO DO</div>
+                <div #card>
+
+                </div>
+                <button (click)="adicionarDiv()">adiconar</button>
+            </div>
+            <div class="column">
+                <div class="title doing">DOING</div>
+                <div class="title cards">
+                    <span>Nome da lista</span>
+                    <span>Nome da tarefa</span>
+                    <div class="icons"><span>&#9788; 0</span><span>&#128336; 0</span></div>
+                    <span>{{email}}</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="title done">DONE</div>
+                <div class="cards">
+                    <span>Nome da lista</span>
+                    <span>Nome da tarefa</span>
+                    <div class="icons"><span>&#9788; 0</span><span>&#128336; 0</span></div>
+                    <span>{{email}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-create-column" (click)="adiconarColuna()">+ adicionar coluna </div>
+</div>

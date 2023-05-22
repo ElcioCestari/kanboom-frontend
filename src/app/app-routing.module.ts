@@ -7,7 +7,7 @@ import { PageCreateNewBoardComponent } from './components/telas/page-create-new-
 import { PageForgotPasswordComponent } from './components/telas/page-forgot-password-component/page-forgot-password.component';
 import { TelaCadastroComponent } from './components/telas/tela-cadastro/tela-cadastro.component';
 import { PageHomeComponent } from './components/telas/page-home/page-home.component';
-
+import { PageViewBoardComponent } from './components/telas/page-view-board/page-view-board.component';
 
 const routes: Routes = [
   { path: '', component: TelaLoginComponentComponent },
@@ -15,7 +15,8 @@ const routes: Routes = [
   { path: 'page-create-new-board', component: PageCreateNewBoardComponent },
   { path: 'page-forgot-password', component: PageForgotPasswordComponent },
   { path: 'tela-cadastro', component: TelaCadastroComponent },
-  { path: 'page-home', component: PageHomeComponent }
+  { path: 'page-home', component: PageHomeComponent },
+  { path: 'page-view-board', component: PageViewBoardComponent }
 ];
 
 @NgModule({
