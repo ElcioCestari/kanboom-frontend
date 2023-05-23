@@ -4,6 +4,8 @@ import {UserService} from 'src/app/services/user.service';
 import {Board} from "../../../../model/board/board";
 import {ActivatedRoute} from "@angular/router";
 import {BoardService} from "../../../services/board.service";
+import {Column} from "../../../../model/column/column";
+import {Card} from "../../../../model/card/card";
 
 @Component({
   selector: 'app-page-view-board',
@@ -36,7 +38,35 @@ export class PageViewBoardComponent implements OnInit {
       .subscribe({
         next: (result) => {
           console.warn(result)
-          this.board = {...result}
+          this.board = {
+            _id: '_id_fake',
+            userId: 'userId_fake',
+            name: 'name_fake',
+            columns: [
+              {
+                name: 'TODO',
+                cards: [
+                  {
+                    name: 'CARD_NAME_1',
+                  },
+                  {
+                    name: 'CARD_NAME_2',
+                  }
+                ]
+              },
+              {
+                name: 'DOING',
+                cards: [
+                  {
+                    name: 'CARD_NAME_1',
+                  },
+                  {
+                    name: 'CARD_NAME_2',
+                  }
+                ]
+              }
+            ]
+          }
         },
         error: (error) => {
           console.error(error);

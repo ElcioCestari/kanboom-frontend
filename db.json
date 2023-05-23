@@ -6,21 +6,27 @@
       "password": "password"
     },
     {
-      "id": 2,
-      "username": "jane@example.com",
-      "password": "password"
-    },
-    {
-      "id": 3,
-      "username": "david@example.com",
-      "password": "password"
-    },
-    {
-      "nome": "julio",
-      "email": "chaka@",
-      "senha": "123",
-      "confirma": "123",
-      "id": 4
+      "id": "646c12b17e120f8189713664",
+      "username": "elcio@gmail.com",
+      "password": "elcio"
     }
-  ]
+  ],
+  "users-login": {
+    "id": "646c12b17e120f8189713664",
+    "username": "elcio@gmail.com",
+    "password": "elcio"
+  },
+  "board": {
+    "_id": "646c12ed7e120f818971366a",
+    "userId": "646c12b17e120f8189713664",
+    "name": "elcio-quadro-1",
+    "columns": {
+      "_id": "646c12ed7e120f818971366a",
+      "userId": "646c12b17e120f8189713664",
+      "name": "elcio-quadro-1",
+      "columns": [],
+      "__v": 0
+    },
+    "__v": 0
+  }
 }
