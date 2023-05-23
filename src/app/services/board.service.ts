@@ -1,15 +1,16 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
-import { Board } from 'src/model/board/board';
-import { Usuario } from 'src/model/usuario';
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {Router} from '@angular/router';
+import {Board} from 'src/model/board/board';
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class BoardService {
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router) {
+  }
 
   save(board: Board) {
     const url = 'http://localhost:3000/board';
@@ -35,5 +36,10 @@ export class BoardService {
       .catch((error) => {
         alert(error?.error?.message);
       });
+  }
+
+  getById(id: any): Observable<Board> {
+    const url = `http://localhost:3000/board/${id}`;
+    return this.http.get<Board>(url);
   }
 }
