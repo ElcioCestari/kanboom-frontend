@@ -1,0 +1,19 @@
+<ul>
+  <li *ngFor="let column of columns">
+    <div>
+      {{column.name}}
+      <div #column class="column-container">
+        <ul>
+          <li *ngFor="let card of column.cards">
+            <div class="columns">
+              <app-card-view [card]="card"></app-card-view>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="btn-create-column" (click)="adiconarColuna()">+ adicionar coluna</div>
+  </li>
+</ul>

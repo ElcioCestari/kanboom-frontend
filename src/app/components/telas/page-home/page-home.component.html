@@ -13,9 +13,10 @@
             <button routerLink="/page-create-new-board">+ criar quadro</button>
         </div>
         <div class="board-container">
-            <div routerLink="/page-view-board" class="board" *ngFor="let board of boards">
-                {{board.name}}
+            <div  class="board" *ngFor="let board of boards">
+              <h3>{{board._id}}</h3>
+              <a [routerLink]="['/page-view-board', board._id]">{{board.name}}</a>
             </div>
         </div>
     </div>
-</div> 
+</div>

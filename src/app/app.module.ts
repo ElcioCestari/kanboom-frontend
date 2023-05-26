@@ -14,6 +14,9 @@ import { PageOnboardingComponent } from './components/telas/page-onboarding/page
 import { PageForgotPasswordComponent } from './components/telas/page-forgot-password-component/page-forgot-password.component';
 import { PageHomeComponent } from './components/telas/page-home/page-home.component';
 import { Usuario } from 'src/model/usuario';
+import { PageViewBoardComponent } from './components/telas/page-view-board/page-view-board.component';
+import { CardViewComponent } from './components/card-view/card-view.component';
+import { ColumnComponent } from './components/column/column.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -25,7 +28,7 @@ import { Usuario } from 'src/model/usuario';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    
+
   ],
   declarations: [
     AppComponent,
@@ -37,10 +40,13 @@ import { Usuario } from 'src/model/usuario';
     PageOnboardingComponent,
     PageForgotPasswordComponent,
     PageHomeComponent,
+    PageViewBoardComponent,
+    CardViewComponent,
+    ColumnComponent,
   ],
   providers: [Usuario],
   bootstrap: [AppComponent],
-  
+
 })
 
 export class AppModule { }
