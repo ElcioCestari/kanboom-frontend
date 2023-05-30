@@ -17,6 +17,7 @@ import { Usuario } from 'src/model/usuario';
 import { PageViewBoardComponent } from './components/telas/page-view-board/page-view-board.component';
 import { CardViewComponent } from './components/card-view/card-view.component';
 import { ColumnComponent } from './components/column/column.component';
+import { PageCreateColumnComponent } from './components/telas/page-create-column/page-create-column.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -43,6 +44,7 @@ import { ColumnComponent } from './components/column/column.component';
     PageViewBoardComponent,
     CardViewComponent,
     ColumnComponent,
+    PageCreateColumnComponent,
   ],
   providers: [Usuario],
   bootstrap: [AppComponent],

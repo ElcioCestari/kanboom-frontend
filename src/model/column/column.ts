@@ -1,6 +1,7 @@
-import {Card} from "../card/card";
+import { Card } from "../card/card";
 
 export class Column {
   name?: string;
   cards?: Card[];
+  boardId?: string;
 }

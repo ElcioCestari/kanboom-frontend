@@ -1,5 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {Column} from "../../../model/column/column";
+import { Component, Input, OnInit } from '@angular/core';
+import { Column } from "../../../model/column/column";
 
 @Component({
   selector: 'app-column',
@@ -8,11 +8,8 @@ import {Column} from "../../../model/column/column";
 })
 export class ColumnComponent implements OnInit {
   @Input() columns: Column[] = [];
+  @Input() boardId: string = '';
 
   ngOnInit(): void {
-  }
-
-  adiconarColuna() {
-    alert()
   }
 }
