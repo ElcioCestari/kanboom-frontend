@@ -18,6 +18,7 @@ import { PageViewBoardComponent } from './components/telas/page-view-board/page-
 import { CardViewComponent } from './components/card-view/card-view.component';
 import { ColumnComponent } from './components/column/column.component';
 import { PageCreateColumnComponent } from './components/telas/page-create-column/page-create-column.component';
+import { PageCreateCardComponent } from './components/telas/page-create-card/page-create-card.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -45,6 +46,7 @@ import { PageCreateColumnComponent } from './components/telas/page-create-column
     CardViewComponent,
     ColumnComponent,
     PageCreateColumnComponent,
+    PageCreateCardComponent,
   ],
   providers: [Usuario],
   bootstrap: [AppComponent],
