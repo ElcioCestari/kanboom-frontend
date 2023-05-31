@@ -8,6 +8,7 @@
   </div>
   <h1>{{board.name}}</h1>
   <div class="column">
+    <p>{{board.columns[0]}}</p>
     <app-column [columns]="board.columns" [boardId]="board._id"></app-column>
   </div>
 </div>

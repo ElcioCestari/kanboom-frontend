@@ -15,7 +15,6 @@ export class PageCreateColumnComponent {
     this.column.boardId = id
     this.columnService.save(this.column).then(value => {
       this.router.navigate(['/page-home'])
-
     })
   }
 }
