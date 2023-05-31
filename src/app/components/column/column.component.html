@@ -1,19 +1,16 @@
-<ul>
-  <li *ngFor="let column of columns">
-    <div>
-      {{column.name}}
-      <div #column class="column-container">
-        <ul>
-          <li *ngFor="let card of column.cards">
-            <div class="columns">
-              <app-card-view [card]="card"></app-card-view>
-            </div>
-          </li>
-        </ul>
-      </div>
+<ul class="column-container">
+  <li class="columns" *ngFor="let column of columns">
+    <div class="column-name">{{column.name}}</div>
+    <div class="cards">
+      <ul class="card">
+        <li *ngFor="let card of column.cards">
+          <app-card-view [card]="card"></app-card-view>
+        </li>
+      </ul>
     </div>
+    <button class="btn-create-card">+ ADICIONAR CARD</button>
   </li>
   <li>
-    <div class="btn-create-column" (click)="adiconarColuna()">+ adicionar coluna</div>
+    <div class="btn-create-column" [routerLink]="['/page-create-column', boardId]">+ ADICIONAR COLUNA</div>
   </li>
 </ul>

@@ -1,0 +1,39 @@
+ul {
+    list-style-type: none;
+}
+
+.column-container {
+    display: flex;
+}
+
+.columns {
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.column-name {
+    padding: 5px;
+    border-radius: 8px;
+    border-top: 1px solid blue;
+    background-color: #fff;
+}
+
+.btn-create-card,
+.btn-create-column {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 2px;
+}
+
+.btn-create-card {
+    cursor: pointer;
+    margin-top: 15px;
+    border: none;
+    color: #4C9AFF;
+    font-family: 'Helvetica';
+}
+
+.btn-create-column {
+    color: #757575;
+}
