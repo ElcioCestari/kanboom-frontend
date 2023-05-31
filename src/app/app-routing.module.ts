@@ -12,6 +12,7 @@ import {TelaCadastroComponent} from './components/telas/tela-cadastro/tela-cadas
 import {PageHomeComponent} from './components/telas/page-home/page-home.component';
 import {PageViewBoardComponent} from './components/telas/page-view-board/page-view-board.component';
 import { PageCreateColumnComponent } from './components/telas/page-create-column/page-create-column.component';
+import { PageCreateCardComponent } from './components/telas/page-create-card/page-create-card.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'tela-cadastro', component: TelaCadastroComponent },
   { path: 'page-home', component: PageHomeComponent },
   { path: 'page-view-board/:id', component: PageViewBoardComponent },
-  { path: 'page-create-column/:boardId', component: PageCreateColumnComponent }
+  { path: 'page-create-column/:boardId', component: PageCreateColumnComponent },
+  { path: 'page-create-card/:columnId', component: PageCreateCardComponent }
 ];
 
 @NgModule({

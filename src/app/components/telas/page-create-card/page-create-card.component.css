@@ -5,7 +5,7 @@
     justify-content: center;
     background-color: #fff;
     width: 489px;
-    height: 300px;
+    height: 600px;
 }
 
 .container input,
@@ -16,8 +16,21 @@ button {
 }
 
 button {
-    color: #fff;
-    background: #4C9AFF;
-    border-radius: 8px;
     border: none;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 8px;
+    background: #4C9AFF;
+}
+
+.container .optionalData {
+    display: flex;
+}
+
+.optionalData input {
+    width: 182px;
+    height: 48px;
+    margin-right: 10px;
+    border: 1px solid #CACFDA;
+    border-radius: 8px;
 }

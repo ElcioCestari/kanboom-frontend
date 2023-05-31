@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>Adicionar Card</h1>
+    <input type="text" [(ngModel)]="card.name" placeholder="Funcionalidade esperada">
+    <span>GERAR DESCRIÇÃO</span>
+    <textarea name="" id="" cols="58" rows="10" placeholder="Descrição do Card" [(ngModel)]="card.description"></textarea>
+    <h3>Estimativas de Tarefa (opcional)</h3>
+    <div class="optionalData">
+        <input type="text" placeholder="Complexidade" [(ngModel)]="card.complexity">
+        <input type="text" placeholder="Tempo" [(ngModel)]="card.time">
+    </div>
+    <button (click)="save()">criar card</button>
+</div>
