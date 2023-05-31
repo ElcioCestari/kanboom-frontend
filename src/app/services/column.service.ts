@@ -18,4 +18,17 @@ export class ColumnService {
         alert(error?.error?.message);
       });
   }
+
+  findById(id: string): Promise<Column> {
+    const url = `http://localhost:3000/column/${id}`
+    return this.http.get<Column>(url)
+      .toPromise()
+      .then((data: any) => {
+        console.log("Coluna coluna encontrada")
+        return data;
+      })
+      .catch((error) => {
+        alert(error?.error?.message);
+      });
+  }
 }
