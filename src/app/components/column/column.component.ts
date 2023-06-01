@@ -1,7 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Column} from "../../../model/column/column";
 import {ColumnService} from 'src/app/services/column.service';
-import { Card } from 'src/model/card/card';
+import {MatDialog} from "@angular/material/dialog";
+import {PageCreateCardComponent} from "../telas/page-create-card/page-create-card.component";
 
 @Component({
   selector: 'app-column',
@@ -12,13 +13,18 @@ export class ColumnComponent implements OnInit {
   @Input() columns: Column[] = [];
   @Input() boardId: string = '';
 
-  constructor(private columnService: ColumnService) {
+  constructor(private columnService: ColumnService, public dialog: MatDialog) {
   }
 
-  ngOnInit() {
-    
-  }
-  teste(){
-    console.warn(this.columns)
+  ngOnInit() {}
+
+  openDialog(column: Column): void {
+    const dialogRef = this.dialog.open(PageCreateCardComponent, {
+      data: column._id,
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 }
