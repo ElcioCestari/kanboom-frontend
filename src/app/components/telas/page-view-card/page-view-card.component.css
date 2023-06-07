@@ -1,0 +1,25 @@
+.card-container {
+    width: 100%;
+    display: flex;
+    padding: 3px;
+    background-color: #FFFFFF;
+}
+
+.card-container .details {
+    width: 450px;
+    margin-right: 40px;
+    padding: 2px;
+    border: 2px solid red;
+}
+
+.card-container .comments {
+    position: relative;
+    width: 450px;
+    border: 2px solid blue;
+}
+
+.comments .teste {
+    position: absolute;
+    display: flex;
+    bottom: 0px;
+}

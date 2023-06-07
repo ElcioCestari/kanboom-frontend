@@ -14,7 +14,7 @@ import { PageViewBoardComponent } from './components/telas/page-view-board/page-
 import { PageCreateColumnComponent } from './components/telas/page-create-column/page-create-column.component';
 import { PageCreateCardComponent } from './components/telas/page-create-card/page-create-card.component';
 import { PagePasswordRecoveryComponent } from './components/telas/page-password-recovery/page-password-recovery.component';
-
+import { PageViewCardComponent } from './components/telas/page-view-card/page-view-card.component';
 
 const routes: Routes = [
   { path: '', component: TelaLoginComponentComponent },
@@ -26,7 +26,8 @@ const routes: Routes = [
   { path: 'page-view-board/:id', component: PageViewBoardComponent },
   { path: 'page-create-column/:boardId', component: PageCreateColumnComponent },
   { path: 'page-create-card/:columnId', component: PageCreateCardComponent },
-  { path: 'email/recovery/:email', component: PagePasswordRecoveryComponent }
+  { path: 'email/recovery/:email', component: PagePasswordRecoveryComponent },
+  { path: 'page-view-card', component: PageViewCardComponent }
 ];
 
 @NgModule({

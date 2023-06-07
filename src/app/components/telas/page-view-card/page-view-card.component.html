@@ -1,0 +1,22 @@
+<div class="card-container">
+    <div class="details">
+        <h2>Título do Card</h2>
+        <span>forma de login</span>
+        <span>GERAR DESCRIÇÃO</span>
+        <p>História de Usuário: Como um usuário, eu quero ser capaz de fazer login na minha conta usando minhas
+            credenciais do Google para que eu possa acessar o sistema de forma rápida e fácil. Especificação do Usuário:
+            A página de login deve ter um botão "Login com Google" visível para o usuário. Ao clicar</p>
+    </div>
+    <div class="comments">
+        <h2>Comentários</h2>
+        <ul>
+            <li *ngFor="let comentario of comentarios">{{ comentarios }}</li>
+        </ul>
+        <form class="teste" (ngSubmit)="adicionarComentario()">
+            <input [(ngModel)]="novoComentario" type="text" minlength="1" maxlength="100"
+                placeholder="Escreva um comentário">
+            <button type="submit">enviar</button>
+        </form>
+
+    </div>
+</div>
