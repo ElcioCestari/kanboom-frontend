@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Usuario } from '../../model/usuario';
 import { UsuarioCreate } from 'src/model/usuario_create';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -65,25 +66,16 @@ export class UserService {
     return this.http.post(url, usuario);
   }
 
-  private apiUrl = 'http://localhost:3000/email/recovery/';
 
-  getUserByEmail(email: string) {
-    const url = `${this.apiUrl}${email}`;
-    return this.http.get(url);
-  }
-
-  updateUser(user: any) {
-    const url = `${this.apiUrl}/${user.id}`;
-    return this.http.put(url, user);
+  resetPassword(user: Usuario): Observable<Usuario> {
+    const apiUrl = 'http://localhost:3000/users/reset_password';
+    return this.http.post<Usuario>(apiUrl, user);
   }
 
   recoveryEmail(email: string) {
     const url = `http://localhost:3000/email/recovery/${email}`
     this.http.post(url, null).toPromise()
-      .then((data: any) => {
-        // this.router.navigate(['/email/recovery/:email']);
-        alert("Funcionou")
-      })
+      .then((data: any) => {})
       .catch((error) => {
         alert(error?.error?.message);
       });

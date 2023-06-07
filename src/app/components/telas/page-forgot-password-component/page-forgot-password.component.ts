@@ -14,10 +14,12 @@ export class PageForgotPasswordComponent {
   email: string = '';
   constructor(private router: Router, private userService: UserService, private usuario: Usuario) { }
   recovery() {
-    if(this.email === ''){
+    if (this.email === '') {
       alert("Informe um email")
-    }else {
+    } else {
       this.userService.recoveryEmail(this.email)
+      alert("Verifique seu email")
+      this.router.navigate(['']);
     }
   }
 }
