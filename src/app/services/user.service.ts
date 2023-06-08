@@ -64,4 +64,28 @@ export class UserService {
     let url = 'http://localhost:3000/users';
     return this.http.post(url, usuario);
   }
+
+  private apiUrl = 'http://localhost:3000/email/recovery/';
+
+  getUserByEmail(email: string) {
+    const url = `${this.apiUrl}${email}`;
+    return this.http.get(url);
+  }
+
+  updateUser(user: any) {
+    const url = `${this.apiUrl}/${user.id}`;
+    return this.http.put(url, user);
+  }
+
+  recoveryEmail(email: string) {
+    const url = `http://localhost:3000/email/recovery/${email}`
+    this.http.post(url, null).toPromise()
+      .then((data: any) => {
+        // this.router.navigate(['/email/recovery/:email']);
+        alert("Funcionou")
+      })
+      .catch((error) => {
+        alert(error?.error?.message);
+      });
+  }
 }

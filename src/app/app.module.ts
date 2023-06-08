@@ -20,6 +20,9 @@ import {CardViewComponent} from './components/card-view/card-view.component';
 import {ColumnComponent} from './components/column/column.component';
 import {PageCreateColumnComponent} from './components/telas/page-create-column/page-create-column.component';
 import {PageCreateCardComponent} from './components/telas/page-create-card/page-create-card.component';
+import {
+  PagePasswordRecoveryComponent
+} from './components/telas/page-password-recovery/page-password-recovery.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDialogModule} from "@angular/material/dialog";
 
@@ -52,6 +55,7 @@ import {MatDialogModule} from "@angular/material/dialog";
     ColumnComponent,
     PageCreateColumnComponent,
     PageCreateCardComponent,
+    PagePasswordRecoveryComponent,
   ],
   providers: [Usuario],
   bootstrap: [AppComponent],
