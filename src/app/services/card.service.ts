@@ -9,14 +9,7 @@ export class CardService {
   constructor(private http: HttpClient) { }
   save(card: Card) {
     const url = 'http://localhost:3000/card'
-    return this.http.post(url, card)
-      .toPromise()
-      .then((data: any) => {
-        alert("Card criado")
-      })
-      .catch((error) => {
-        alert(error?.error?.message);
-      });
+    return this.http.post(url, card);
   }
 
   findById(id: string): Promise<Card> {
