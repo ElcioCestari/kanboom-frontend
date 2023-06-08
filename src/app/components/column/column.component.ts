@@ -24,7 +24,8 @@ export class ColumnComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      this.columnService.findAllByBoardId(this.boardId)
+        .then(c => this.columns = c)
     });
   }
 }

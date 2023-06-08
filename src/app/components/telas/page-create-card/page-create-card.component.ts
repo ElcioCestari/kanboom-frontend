@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {CardService} from 'src/app/services/card.service';
 import {Card} from 'src/model/card/card';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import {take} from "rxjs";
 
 @Component({
   selector: 'app-page-create-card',
@@ -23,8 +24,11 @@ export class PageCreateCardComponent {
 
   save() {
     this.card.column = this.id
-    this.cardService.save(this.card).then(value => {
-      this.router.navigate(['/page-home'])
-    })
+    this.cardService.save(this.card)
+      .pipe(take(1))
+      .subscribe({
+        next: v => (this.dialogRef.close()),
+        error: () => alert(`algo deu errado ao salvaro card`)
+      });
   }
 }
