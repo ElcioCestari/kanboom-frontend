@@ -25,6 +25,8 @@ import {
 } from './components/telas/page-password-recovery/page-password-recovery.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDialogModule} from "@angular/material/dialog";
+import {MatCardModule} from "@angular/material/card";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   imports: [
@@ -39,6 +41,8 @@ import {MatDialogModule} from "@angular/material/dialog";
     FormsModule,
     BrowserAnimationsModule,
     MatDialogModule,
+    MatCardModule,
+    MatIconModule,
   ],
   declarations: [
     AppComponent,
