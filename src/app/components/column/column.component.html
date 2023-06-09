@@ -2,7 +2,11 @@
   <li class="columns" *ngFor="let column of columns">
     <mat-card>
       <mat-card-header>
-        <div class="column-name">{{column.name}}</div>
+        <div class="column-name">
+          {{column.name}}
+          {{column.cards?.length}}
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit"></mat-icon>
+        </div>
       </mat-card-header>
       <div class="cards">
         <ul class="card">
@@ -13,7 +17,9 @@
       </div>
       <mat-card-actions>
         <button class="btn-create-card" (click)="openDialog(column)">
-          <mat-icon aria-hidden="false" aria-label="adicionar card" fontIcon="add"></mat-icon>ADICIONAR CARD</button>
+          <mat-icon aria-hidden="false" aria-label="adicionar card" fontIcon="add"></mat-icon>
+          ADICIONAR CARD
+        </button>
       </mat-card-actions>
     </mat-card>
   </li>
