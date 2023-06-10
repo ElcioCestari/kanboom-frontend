@@ -15,7 +15,7 @@
         class="example-list"
         (cdkDropListDropped)="drop($event)">
         <div class="example-box" *ngFor="let card of column.cards" cdkDrag>
-          <app-card-view [card]="card"></app-card-view>
+          <app-card-view class="app-card-view" [card]="card"></app-card-view>
         </div>
       </mat-card-content>
     </mat-card>
