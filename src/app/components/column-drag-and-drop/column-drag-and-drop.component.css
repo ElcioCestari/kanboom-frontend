@@ -69,3 +69,7 @@ mat-card-header {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
+.btn-create-column {
+  align-self: start;
+}

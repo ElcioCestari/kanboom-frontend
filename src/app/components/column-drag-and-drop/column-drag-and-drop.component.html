@@ -1,5 +1,5 @@
 <div cdkDropListGroup class="columns">
-  <div *ngFor="let column of columns; let columnIndex = index">
+  <div class="item" *ngFor="let column of columns; let columnIndex = index">
     <mat-card class="example-container">
       <mat-card-header>
         <div class="column-name">
@@ -27,8 +27,8 @@
       </mat-card-actions>
     </mat-card>
   </div>
-  <div class="btn-create-column" [routerLink]="['/page-create-column', boardId]">
+  <button class="btn-create-column"  (click)="openCreateColumnDialog(boardId)">
     <mat-icon aria-hidden="false" aria-label="adicionar card" fontIcon="add"></mat-icon>
     ADICIONAR COLUNA
-  </div>
+  </button>
 </div>

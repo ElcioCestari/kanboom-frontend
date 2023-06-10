@@ -1,7 +1,9 @@
-import { Component, Input } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { ColumnService } from 'src/app/services/column.service';
-import { Column } from 'src/model/column/column';
+import {Component, Inject, Input} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import {ColumnService} from 'src/app/services/column.service';
+import {Column} from 'src/model/column/column';
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+
 @Component({
   selector: 'app-page-create-column',
   templateUrl: './page-create-column.component.html',
@@ -9,12 +11,19 @@ import { Column } from 'src/model/column/column';
 })
 export class PageCreateColumnComponent {
   column: Column = {}
-  constructor(private columnService: ColumnService, private router: Router, private route: ActivatedRoute,) { }
+
+  constructor(
+    public dialogRef: MatDialogRef<PageCreateColumnComponent>,
+    @Inject(MAT_DIALOG_DATA) public id: string,
+    private columnService: ColumnService,
+    private router: Router,
+    private route: ActivatedRoute,) {
+  }
+
   save() {
-    const id = this.route.snapshot.params['boardId'];
-    this.column.boardId = id
+    this.column.boardId = this.id
     this.columnService.save(this.column).then(value => {
-      this.router.navigate(['/page-home'])
+      this.dialogRef.close()
     })
   }
 }
