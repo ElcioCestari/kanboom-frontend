@@ -10,7 +10,6 @@
           <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit"></mat-icon>
         </div>
       </mat-card-header>
-
       <mat-card-content
         cdkDropList
         [cdkDropListData]="column.cards"
@@ -20,6 +19,16 @@
           <app-card-view class="app-card-view" [card]="card"></app-card-view>
         </div>
       </mat-card-content>
+      <mat-card-actions>
+        <button class="btn-create-card" (click)="openDialog(column)">
+          <mat-icon aria-hidden="false" aria-label="adicionar card" fontIcon="add"></mat-icon>
+          ADICIONAR CARD
+        </button>
+      </mat-card-actions>
     </mat-card>
+  </div>
+  <div class="btn-create-column" [routerLink]="['/page-create-column', boardId]">
+    <mat-icon aria-hidden="false" aria-label="adicionar card" fontIcon="add"></mat-icon>
+    ADICIONAR COLUNA
   </div>
 </div>
