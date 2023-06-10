@@ -63,3 +63,10 @@
   flex-wrap: nowrap;
   justify-content: space-between;
 }
+
+mat-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
