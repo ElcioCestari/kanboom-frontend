@@ -27,6 +27,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
+import { ColumnDragAndDropComponent } from './components/column-drag-and-drop/column-drag-and-drop.component';
+import { DragDropModule } from "@angular/cdk/drag-drop";
 
 @NgModule({
   imports: [
@@ -43,6 +45,7 @@ import {MatIconModule} from "@angular/material/icon";
     MatDialogModule,
     MatCardModule,
     MatIconModule,
+    DragDropModule,
   ],
   declarations: [
     AppComponent,
@@ -60,6 +63,7 @@ import {MatIconModule} from "@angular/material/icon";
     PageCreateColumnComponent,
     PageCreateCardComponent,
     PagePasswordRecoveryComponent,
+    ColumnDragAndDropComponent,
   ],
   providers: [Usuario],
   bootstrap: [AppComponent],

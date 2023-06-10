@@ -9,7 +9,7 @@
   <h1>{{board.name}}</h1>
   <mat-card class="column">
     <mat-card-content>
-      <app-column [columns]="board.columns" [boardId]="board._id"></app-column>
+      <app-column-drag-and-drop [columns]="board.columns" [boardId]="board._id"></app-column-drag-and-drop>
     </mat-card-content>
   </mat-card>
 </div>
