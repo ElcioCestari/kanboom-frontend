@@ -14,7 +14,7 @@ export class TelaLoginComponentComponent implements OnInit {
 
 
   verificarPreenchimento() {
-    if (this.camposPreenchidos == !!(this.usuario.email && this.usuario.password)) {
+    if (this.camposPreenchidos = !!(this.usuario.email && this.usuario.password)) {
       this.renderer.addClass(this.elementRef.nativeElement.querySelector('#btn-enter'), 'destaque');
     }else{
       this.renderer.removeClass(this.elementRef.nativeElement.querySelector('#btn-enter'), 'destaque');
