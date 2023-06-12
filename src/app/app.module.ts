@@ -25,6 +25,7 @@ import {
 } from './components/telas/page-password-recovery/page-password-recovery.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDialogModule} from "@angular/material/dialog";
+import {PageViewCardComponent} from "./components/telas/page-view-card/page-view-card.component";
 
 @NgModule({
   imports: [
@@ -56,11 +57,11 @@ import {MatDialogModule} from "@angular/material/dialog";
     PageCreateColumnComponent,
     PageCreateCardComponent,
     PagePasswordRecoveryComponent,
+    PageViewCardComponent,
   ],
   providers: [Usuario],
   bootstrap: [AppComponent],
 
 })
 
-export class AppModule {
-}
+export class AppModule { }
