@@ -29,6 +29,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
 import { ColumnDragAndDropComponent } from './components/column-drag-and-drop/column-drag-and-drop.component';
 import { DragDropModule } from "@angular/cdk/drag-drop";
+import {PageViewCardComponent} from "./components/telas/page-view-card/page-view-card.component";
 
 @NgModule({
   imports: [
@@ -43,9 +44,6 @@ import { DragDropModule } from "@angular/cdk/drag-drop";
     FormsModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    MatCardModule,
-    MatIconModule,
-    DragDropModule,
   ],
   declarations: [
     AppComponent,
@@ -64,6 +62,7 @@ import { DragDropModule } from "@angular/cdk/drag-drop";
     PageCreateCardComponent,
     PagePasswordRecoveryComponent,
     ColumnDragAndDropComponent,
+    PageViewCardComponent,
   ],
   providers: [Usuario],
   bootstrap: [AppComponent],
