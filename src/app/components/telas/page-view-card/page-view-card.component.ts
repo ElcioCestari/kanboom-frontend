@@ -6,11 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./page-view-card.component.css']
 })
 export class PageViewCardComponent {
-  comentarios: string[] = [];
+  comentarios: Comentario[] = [];
   novoComentario!: string;
 
   adicionarComentario() {
-    this.comentarios.push(this.novoComentario);
+    const comentario: Comentario = {
+      texto: this.novoComentario,
+      horario: new Date ()
+    };
+
+    this.comentarios.push(comentario);
     this.novoComentario = '';
   }
+}
+
+interface Comentario {
+  texto: string;
+  horario: Date;
 }

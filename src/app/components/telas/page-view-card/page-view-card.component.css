@@ -9,13 +9,20 @@
     width: 450px;
     margin-right: 40px;
     padding: 2px;
-    border: 2px solid red;
+}
+
+.details .btn-save {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    color: #FFF;
+    background-color: #4C9AFF;
 }
 
 .card-container .comments {
     position: relative;
     width: 450px;
-    border: 2px solid blue;
 }
 
 .comments .teste {
