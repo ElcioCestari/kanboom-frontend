@@ -8,7 +8,7 @@
         </li>
       </ul>
     </div>
-    <button class="btn-create-card" [routerLink]="['/page-create-card', column._id]">+ ADICIONAR CARD</button>
+    <button class="btn-create-card" (click)="openDialog(column)">+ ADICIONAR CARD</button>
   </li>
   <li>
     <div class="btn-create-column" [routerLink]="['/page-create-column', boardId]">+ ADICIONAR COLUNA</div>

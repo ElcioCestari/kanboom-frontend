@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { CardService } from 'src/app/services/card.service';
-import { Card } from 'src/model/card/card';
+import {Component, Inject} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import {CardService} from 'src/app/services/card.service';
+import {Card} from 'src/model/card/card';
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import {take} from "rxjs";
 
 @Component({
   selector: 'app-page-create-card',
@@ -10,12 +12,23 @@ import { Card } from 'src/model/card/card';
 })
 export class PageCreateCardComponent {
   card: Card = {}
-  constructor(private cardService: CardService, private router: Router, private route: ActivatedRoute) { }
+
+  constructor(
+    public dialogRef: MatDialogRef<PageCreateCardComponent>,
+    @Inject(MAT_DIALOG_DATA) public id: string,
+    private cardService: CardService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {
+  }
+
   save() {
-    const id = this.route.snapshot.params['columnId'];
-    this.card.column = id
-    this.cardService.save(this.card).then(value => {
-      this.router.navigate(['/page-home'])
-    })
+    this.card.column = this.id
+    this.cardService.save(this.card)
+      .pipe(take(1))
+      .subscribe({
+        next: v => (this.dialogRef.close()),
+        error: () => alert(`algo deu errado ao salvaro card`)
+      });
   }
 }
