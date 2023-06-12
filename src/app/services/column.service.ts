@@ -12,7 +12,7 @@ export class ColumnService {
     return this.http.post(url, column)
       .toPromise()
       .then((data: any) => {
-        alert("Coluna criado")
+        console.log("Coluna criado")
       })
       .catch((error) => {
         alert(error?.error?.message);

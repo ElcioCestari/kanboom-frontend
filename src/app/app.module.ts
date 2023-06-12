@@ -25,6 +25,10 @@ import {
 } from './components/telas/page-password-recovery/page-password-recovery.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDialogModule} from "@angular/material/dialog";
+import {MatCardModule} from "@angular/material/card";
+import {MatIconModule} from "@angular/material/icon";
+import { ColumnDragAndDropComponent } from './components/column-drag-and-drop/column-drag-and-drop.component';
+import { DragDropModule } from "@angular/cdk/drag-drop";
 import {PageViewCardComponent} from "./components/telas/page-view-card/page-view-card.component";
 
 @NgModule({
@@ -40,6 +44,9 @@ import {PageViewCardComponent} from "./components/telas/page-view-card/page-view
     FormsModule,
     BrowserAnimationsModule,
     MatDialogModule,
+    MatCardModule,
+    MatIconModule,
+    DragDropModule,
   ],
   declarations: [
     AppComponent,
@@ -57,6 +64,7 @@ import {PageViewCardComponent} from "./components/telas/page-view-card/page-view
     PageCreateColumnComponent,
     PageCreateCardComponent,
     PagePasswordRecoveryComponent,
+    ColumnDragAndDropComponent,
     PageViewCardComponent,
   ],
   providers: [Usuario],
@@ -64,4 +72,5 @@ import {PageViewCardComponent} from "./components/telas/page-view-card/page-view
 
 })
 
-export class AppModule { }
+export class AppModule {
+}

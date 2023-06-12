@@ -1,0 +1,34 @@
+<div cdkDropListGroup class="columns">
+  <div class="item" *ngFor="let column of columns; let columnIndex = index">
+    <mat-card class="example-container">
+      <mat-card-header>
+        <div class="column-name">
+          {{column.name}}
+        </div>
+        <div>
+          {{column.cards?.length}}
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit"></mat-icon>
+        </div>
+      </mat-card-header>
+      <mat-card-content
+        cdkDropList
+        [cdkDropListData]="column.cards"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let card of column.cards" cdkDrag>
+          <app-card-view class="app-card-view" [card]="card"></app-card-view>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button class="btn-create-card" (click)="openDialog(column)">
+          <mat-icon aria-hidden="false" aria-label="adicionar card" fontIcon="add"></mat-icon>
+          ADICIONAR CARD
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <button class="btn-create-column"  (click)="openCreateColumnDialog(boardId)">
+    <mat-icon aria-hidden="false" aria-label="adicionar card" fontIcon="add"></mat-icon>
+    ADICIONAR COLUNA
+  </button>
+</div>

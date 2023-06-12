@@ -7,8 +7,9 @@
     </div>
   </div>
   <h1>{{board.name}}</h1>
-  <div class="column">
-    <p>{{board.columns[0]}}</p>
-    <app-column [columns]="board.columns" [boardId]="board._id"></app-column>
-  </div>
+  <mat-card class="column">
+    <mat-card-content>
+      <app-column-drag-and-drop [columns]="board.columns" [boardId]="board._id"></app-column-drag-and-drop>
+    </mat-card-content>
+  </mat-card>
 </div>
