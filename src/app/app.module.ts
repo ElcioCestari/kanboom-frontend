@@ -44,6 +44,9 @@ import {PageViewCardComponent} from "./components/telas/page-view-card/page-view
     FormsModule,
     BrowserAnimationsModule,
     MatDialogModule,
+    MatCardModule,
+    MatIconModule,
+    DragDropModule,
   ],
   declarations: [
     AppComponent,
