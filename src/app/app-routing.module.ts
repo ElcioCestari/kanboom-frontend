@@ -15,7 +15,7 @@ import {
   PagePasswordRecoveryComponent
 } from './components/telas/page-password-recovery/page-password-recovery.component';
 import {authGuard} from "./guards/auth.guard";
-import { PageViewCardComponent } from './components/page-view-card/page-view-card.component';
+import { PageViewCardComponent } from './components/card-edit/card-edit.component';
 
 const routes: Routes = [
   {path: '', component: TelaLoginComponentComponent},

@@ -29,7 +29,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
 import { ColumnDragAndDropComponent } from './components/column-drag-and-drop/column-drag-and-drop.component';
 import { DragDropModule } from "@angular/cdk/drag-drop";
-import {PageViewCardComponent} from "./components/page-view-card/page-view-card.component";
+import {CardEditComponent} from "./components/card-edit/card-edit.component";
 
 @NgModule({
   imports: [
@@ -65,7 +65,7 @@ import {PageViewCardComponent} from "./components/page-view-card/page-view-card.
     PageCreateCardComponent,
     PagePasswordRecoveryComponent,
     ColumnDragAndDropComponent,
-    PageViewCardComponent,
+    CardEditComponent,
   ],
   providers: [Usuario],
   bootstrap: [AppComponent],

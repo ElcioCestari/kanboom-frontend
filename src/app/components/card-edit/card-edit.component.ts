@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-page-view-card',
-  templateUrl: './page-view-card.component.html',
-  styleUrls: ['./page-view-card.component.css']
+  templateUrl: './card-edit.component.html',
+  styleUrls: ['./card-edit.component.css']
 })
-export class PageViewCardComponent {
+export class CardEditComponent {
   comentarios: Comentario[] = [];
   novoComentario!: string;
 
