@@ -6,6 +6,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {PageCreateCardComponent} from "../telas/page-create-card/page-create-card.component";
 import {Card} from "../../../model/card/card";
 import {PageCreateColumnComponent} from "../telas/page-create-column/page-create-column.component";
+import { BoardService } from 'src/app/services/board.service';
 
 @Component({
   selector: 'app-column-drag-and-drop',
@@ -16,7 +17,7 @@ export class ColumnDragAndDropComponent implements OnChanges {
   @Input() columns: Column[] = []
   @Input() boardId: string = ''
 
-  constructor(private columnService: ColumnService, public dialog: MatDialog) {
+  constructor(private columnService: ColumnService, public dialog: MatDialog, private boardService: BoardService) {
   }
 
   ngOnChanges() {
@@ -46,8 +47,13 @@ export class ColumnDragAndDropComponent implements OnChanges {
           event.previousIndex,
           event.currentIndex,
         );
+        this.update()
       }
     }
+  }
+
+  update() {
+    this.boardService.update(this.columns)
   }
 
   openCreateColumnDialog(boardId: string) {
