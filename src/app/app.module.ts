@@ -29,7 +29,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
 import { ColumnDragAndDropComponent } from './components/column-drag-and-drop/column-drag-and-drop.component';
 import { DragDropModule } from "@angular/cdk/drag-drop";
-import {PageViewCardComponent} from "./components/telas/page-view-card/page-view-card.component";
+import {PageViewCardComponent} from "./components/page-view-card/page-view-card.component";
 
 @NgModule({
   imports: [
