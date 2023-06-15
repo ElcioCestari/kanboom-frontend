@@ -1,5 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { CardService } from 'src/app/services/card.service';
+import { Card } from 'src/model/card/card';
 
 @Component({
   selector: 'app-page-view-card',
@@ -11,7 +13,8 @@ export class CardEditComponent {
   novoComentario!: string;
 
   constructor(public dialogRef: MatDialogRef<CardEditComponent>,
-    @Inject(MAT_DIALOG_DATA) public id: string,
+    @Inject(MAT_DIALOG_DATA) public card: Card,
+    private cardService: CardService,
   ) {
   }
 
@@ -24,6 +27,11 @@ export class CardEditComponent {
     this.comentarios.push(comentario);
     this.novoComentario = '';
   }
+
+  update() {
+    this.cardService.update(this.card)
+  }
+
 }
 
 interface Comentario {

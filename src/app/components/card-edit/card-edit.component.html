@@ -1,24 +1,10 @@
 <div class="card-container">
     <div class="details">
-        <h2>Título do Card</h2>
-        <span>tipo da tarefa</span>
-        <p>GERAR DESCRIÇÃO</p>
-        <p>História de Usuário: Como um usuário, eu quero ser capaz de fazer login na minha conta usando minhas
-            credenciais do Google para que eu possa acessar o sistema de forma rápida e fácil. Especificação do Usuário:
-            A página de login deve ter um botão "Login com Google" visível para o usuário. Ao clicar
-            História de Usuário: Como um usuário, eu quero ser capaz de fazer login na minha conta usando minhas
-            credenciais do Google para que eu possa acessar o sistema de forma rápida e fácil. Especificação do Usuário:
-            A página de login deve ter um botão "Login com Google" visível para o usuário. Ao clicar
-            História de Usuário: Como um usuário, eu quero ser capaz de fazer login na minha conta usando minhas
-            credenciais do Google para que eu possa acessar o sistema de forma rápida e fácil. Especificação do Usuário:
-            A página de login deve ter um botão "Login com Google" visível para o usuário. Ao clicar
-            História de Usuário: Como um usuário, eu quero ser capaz de fazer login na minha conta usando minhas
-            credenciais do Google para que eu possa acessar o sistema de forma rápida e fácil. Especificação do Usuário:
-            A página de login deve ter um botão "Login com Google" visível para o usuário. Ao clicar
-        </p>
+        <h2>{{card.name}}</h2>
+        <input id="description-input" type="text" [(ngModel)]="card.description">
         <h4>Estimativas de Tarefa (opcional)</h4>
-        <div class="icons"><span>&#9788; 0</span> <span>&#128336; 0</span></div>
-        <button class="btn-save">salvar</button>
+        <div class="icons"><span>&#9788; {{card.complexity}}</span> <span>&#128336; {{card.time}}</span></div>
+        <button class="btn-save" (click)="update()">salvar</button>
     </div>
     <div class="comments">
         <h2>Comentários</h2>

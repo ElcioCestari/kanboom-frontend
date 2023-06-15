@@ -1,15 +1,15 @@
 <mat-card class="card" (click)="openEditCard()">
   <mat-card-title>{{card.name}}</mat-card-title>
   <mat-card-content>
-    <span>{{card.description}}</span>
+    <span>{{card.name}}</span>
     <div class="icon-container">
       <div class="icons">
         <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="brightness_low"></mat-icon>
-        0
+        {{card.complexity}}
       </div>
       <div class="icons">
         <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="schedule"></mat-icon>
-        0
+        {{card.time}}
       </div>
     </div>
   </mat-card-content>
