@@ -4,6 +4,7 @@ import { UserService } from 'src/app/services/user.service';
 import { Usuario } from 'src/model/usuario';
 import { CardEditComponent } from '../card-edit/card-edit.component';
 import { MatDialog } from '@angular/material/dialog';
+import { CardService } from 'src/app/services/card.service';
 
 @Component({
   selector: 'app-card-view',
@@ -12,7 +13,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class CardViewComponent {
   email!: string;
-  constructor(private userService: UserService, private usuario: Usuario, public dialog: MatDialog) {
+  constructor(private userService: UserService, private usuario: Usuario, public dialog: MatDialog, private cardService: CardService) {
     this.email = `${this.userService.getEmail(this.usuario)}`
   }
 
@@ -25,6 +26,10 @@ export class CardViewComponent {
 
     dialogRef.afterClosed().subscribe(result => {
     });
+  }
+
+  deleteCard() {
+    this.cardService.deleteCard(this.card);
   }
 
 }
