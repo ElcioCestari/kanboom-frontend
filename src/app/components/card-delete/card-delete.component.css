@@ -1,0 +1,17 @@
+.delete-container {
+    width: 320px;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+button {
+    width: 80px;
+    height: 20px;
+    margin-right: 28px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #4C9AFF;
+    border-radius: 8px;
+}

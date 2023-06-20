@@ -44,7 +44,7 @@ export class CardService {
     return this.http.delete(url)
       .toPromise()
       .then((data: any) => {
-        alert("Card deletado")
+        alert("Card excluído")
       })
       .catch((error) => {
         alert(error?.error?.message);
