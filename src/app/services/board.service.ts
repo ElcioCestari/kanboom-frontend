@@ -1,8 +1,9 @@
-import {HttpClient} from '@angular/common/http';
-import {Injectable} from '@angular/core';
-import {Router} from '@angular/router';
-import {Board} from 'src/model/board/board';
-import {Observable} from "rxjs";
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+import { Board } from 'src/model/board/board';
+import { Observable } from "rxjs";
+import { Column } from 'src/model/column/column';
 
 @Injectable({
   providedIn: 'root'
@@ -41,5 +42,17 @@ export class BoardService {
   getById(id: any): Observable<Board> {
     const url = `http://localhost:3000/board/${id}`;
     return this.http.get<Board>(url);
+  }
+
+  update(columns: Column[]) {
+  const url = `http://localhost:3000/board/${columns[0].boardId}`;
+    return this.http.patch(url, {columns})
+      .toPromise()
+      .then((data: any) => {
+        alert("Quadro atualizado")
+      })
+      .catch((error) => {
+        alert(error?.error?.message);
+      });
   }
 }

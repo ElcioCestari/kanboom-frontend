@@ -1,0 +1,24 @@
+<div class="card-container">
+    <div class="details">
+        <h2>{{card.name}}</h2>
+        <input id="description-input" type="text" [(ngModel)]="card.description">
+        <h4>Estimativas de Tarefa (opcional)</h4>
+        <div class="icons"><span>&#9788; {{card.complexity}}</span> <span>&#128336; {{card.time}}</span></div>
+        <button class="btn-save" (click)="update()">salvar</button>
+    </div>
+    <div class="comments">
+        <h2>Comentários</h2>
+        <ul>
+            <li *ngFor="let comentario of comentarios">
+                <span>{{ comentario.texto }}</span> ------
+                <span>{{ comentario.horario | date:'dd/MM/yyyy HH:mm:ss' }}</span>
+            </li>
+        </ul>
+        <form class="teste" (ngSubmit)="adicionarComentario()">
+            <input name="novoComentario" [(ngModel)]="novoComentario" type="text" minlength="1" maxlength="100"
+                placeholder="Escreva um comentário">
+            <button type="submit">enviar</button>
+        </form>
+
+    </div>
+</div>

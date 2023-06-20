@@ -24,4 +24,30 @@ export class CardService {
         alert(error?.error?.message);
       });
   }
+
+  update(card: Card) {
+    const url = `http://localhost:3000/card/${card._id}`;
+    console.warn(card)
+    return this.http.patch(url, { card })
+      .toPromise()
+      .then((data: any) => {
+        alert("Card atualizado")
+      })
+      .catch((error) => {
+        alert(error?.error?.message);
+      });
+  }
+
+  deleteCard(card: Card) {
+    const url = `http://localhost:3000/card/${card._id}`;
+    console.warn(card)
+    return this.http.delete(url)
+      .toPromise()
+      .then((data: any) => {
+        alert("Card excluído")
+      })
+      .catch((error) => {
+        alert(error?.error?.message);
+      });
+  }
 }
